@@ -4,7 +4,7 @@ import Icons from 'react-native-vector-icons/AntDesign';
 
 export default function ButtonIcon({nameIcon, color}) {
   return (
-    <View style={[styles.container, {borderColor: {color}}]}>
+    <View style={[styles.container, {borderColor: color}]}>
       <Icons name={nameIcon} size={30} color={color} />
     </View>
   );

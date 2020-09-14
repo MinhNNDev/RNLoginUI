@@ -7,9 +7,9 @@ export default function InputValue({title, icon, isPassword}) {
     <View style={styles.container}>
       <Text style={styles.title}> {title} </Text>
       <View style={styles.inputContainer}>
-        <Icons name={icon} size={25} color="#d3d4d5" />
-        <TextInput style={styles.textInput} />
-        {isPassword && <Icons name="eye-off" size={25} color="#ec80b5" />}
+        <Icons name={icon} size={22} color="#d3d4d5" />
+        <TextInput style={styles.input} />
+        {isPassword && <Icons name="eye-off" size={22} color="#ec80b5" />}
       </View>
     </View>
   );
@@ -24,8 +24,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#d3d4d5',
-    padding: 10,
     borderRadius: 4,
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    height: 50,
   },
   title: {
     color: '#8a8b8c',

@@ -1,23 +1,23 @@
 import React from 'react';
-import {Text, StyleSheet, View, SafeAreaView} from 'react-native';
+import {Text, StyleSheet, View} from 'react-native';
+import Button from '../../components/Button';
 import InputValue from '../../components/InputValue';
 
 export default function register() {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <InputValue title="Name" icon="user" />
-        <InputValue title="Email" icon="mail" />
-        <InputValue title="Password" icon="lock" isPassword />
-        <View style={styles.policy}>
-          <View style={styles.box} />
-          <Text style={styles.policyText}>
-            I have read and argee the{' '}
-            <Text style={styles.policyTextColor}>Privacy Policy</Text>
-          </Text>
-        </View>
+    <View style={styles.container}>
+      <InputValue title="Name" icon="user" />
+      <InputValue title="Email" icon="mail" />
+      <InputValue title="Password" icon="lock" isPassword />
+      <View style={styles.policy}>
+        <View style={styles.box} />
+        <Text style={styles.policyText}>
+          I have read and argee the{' '}
+          <Text style={styles.policyTextColor}>Privacy Policy</Text>
+        </Text>
       </View>
-    </SafeAreaView>
+      <Button>CREATE ACCOUNT</Button>
+    </View>
   );
 }
 

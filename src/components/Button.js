@@ -1,16 +1,15 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-export default function Button({children}) {
+export default function Button({style, children}) {
   return (
     <TouchableOpacity>
       <LinearGradient
         colors={['#EB64CF', '#ED736F']}
         start={{x: 0, y: 0}}
         end={{x: 1, y: 0}}
-        style={styles.gradient}>
-        <Text style={styles.Text}>{children}</Text>
+        style={[styles.gradient, style]}>
+        <Text style={styles.text}>{children}</Text>
       </LinearGradient>
     </TouchableOpacity>
   );
@@ -19,7 +18,7 @@ export default function Button({children}) {
 const styles = StyleSheet.create({
   text: {
     fontSize: 15,
-    fontWeight: '600',
+    fontWeight: '800',
     color: '#fff',
   },
   gradient: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 
 const AppContainer = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
@@ -23,3 +23,9 @@ const AppContainer = () => {
   );
 };
 export default AppContainer;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

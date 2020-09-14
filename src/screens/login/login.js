@@ -1,21 +1,21 @@
 import React from 'react';
-import {StyleSheet, View, SafeAreaView} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Button from '../../components/Button';
 import InputValue from '../../components/InputValue';
 export default function login() {
   return (
-    <SafeAreaView>
+    <View>
       <View style={styles.container}>
         <InputValue title="Email" icon="mail" />
         <InputValue title="Password" icon="lock" isPassword />
-        <Button style={styles.button} >LOGIN</Button>
       </View>
-    </SafeAreaView>
+      <Button style={styles.button}>LOGIN</Button>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  button: {
+    marginTop: 40,
   },
 });

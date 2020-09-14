@@ -1,6 +1,12 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {Text, StyleSheet, View, SafeAreaView} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {
+  Text,
+  StyleSheet,
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 
 import ButtonIcon from '../../components/ButtonIcon';
 import TextGradient from '../../components/TextGradient';
@@ -9,36 +15,37 @@ import Register from '../login/register';
 import Login from '../login/login';
 
 export default function index() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [tab, setTab] = useState(0);
   return (
     <SafeAreaView style={styles.container}>
       <TextGradient style={styles.title}>
-        New {tab == 0 ? 'Login' : 'Register'} UI
+        New {tab === 0 ? 'Login' : 'Register'} UI
       </TextGradient>
       <View style={styles.listTab}>
         <TouchableOpacity
           onPress={() => setTab(0)}
-          style={[styles.button, tab == 0 && {borderBottomColor: '#ED719E'}]}>
-          <Text style={[styles.buttonText, tab == 0 && {color: '#ED719E'}]}>
+          style={[styles.button, tab === 0 && {borderBottomColor: '#ED719E'}]}>
+          <Text style={[styles.buttonText, tab === 0 && {color: '#ED719E'}]}>
             LOGIN
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => setTab(1)}
-          style={[styles.button, tab == 1 && {borderBottomColor: '#ED719E'}]}>
-          <Text style={[styles.buttonText, tab == 1 && {color: '#ED719E'}]}>
+          style={[styles.button, tab === 1 && {borderBottomColor: '#ED719E'}]}>
+          <Text style={[styles.buttonText, tab === 1 && {color: '#ED719E'}]}>
             CREATE ACCOUNT
           </Text>
         </TouchableOpacity>
       </View>
       <View style={styles.wrapper}>
-        {tab == 0 && <Login />}
-        {tab == 0 && <Register />}
+        {tab === 0 && <Login />}
+        {tab === 1 && <Register />}
       </View>
       <View style={styles.footer}>
         <Text style={styles.footerText}>
           {' '}
-          OR {tab == 0 ? 'LOGIN' : 'CREATE ACCOUNT'} WITH{' '}
+          OR {tab === 0 ? 'LOGIN' : 'CREATE ACCOUNT'} WITH{' '}
         </Text>
         <View style={styles.listButtonAccount}>
           <ButtonIcon nameIcon="twitter" color="#EB63D3" />
@@ -58,15 +65,14 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: '700',
     textAlign: 'center',
-    padding: 40,
-    fontStyle: 'Italic',
+    padding: 25,
   },
   listTab: {
     flexDirection: 'row',
   },
   wrapper: {
     flex: 1,
-    paddingVertical: 30,
+    paddingVertical: 10,
     paddingHorizontal: 40,
   },
   button: {
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    paddingVertical: 13,
+    paddingVertical: 10,
     borderBottomWidth: 3,
     borderBottomColor: '#F4C1ED',
   },
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     paddingHorizontal: 40,
-    paddingVertical: 20,
+    paddingVertical: 5,
   },
   footerText: {
     fontSize: 16,
