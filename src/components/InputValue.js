@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import React from 'react';
+import {Text, StyleSheet, View, TextInput} from 'react-native';
 import Icons from 'react-native-vector-icons/Feather';
-import {TextInput} from 'react-native-gesture-handler';
 
 export default function InputValue({title, icon, isPassword}) {
   return (
@@ -17,6 +16,9 @@ export default function InputValue({title, icon, isPassword}) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginBottom: 15,
+  },
   inputContainer: {
     backgroundColor: '#f8f9fa',
     flexDirection: 'row',

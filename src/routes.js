@@ -3,8 +3,7 @@ import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import Login from './screens/login/login';
-import Register from './screens/login/register';
+import App from './screens/login/index';
 
 const Stack = createStackNavigator();
 
@@ -15,7 +14,7 @@ const AppContainer = () => {
         <Stack.Navigator>
           <Stack.Screen
             name="Login"
-            component={Register}
+            component={App}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

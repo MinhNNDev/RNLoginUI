@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
-import {Text, StyleSheet, View, SafeAreaView} from 'react-native';
-
-export default class login extends Component {
-  render() {
-    return (
-      <SafeAreaView style={styles.container}>
-        <View>
-          <Text>Login</Text>
-        </View>
-      </SafeAreaView>
-    );
-  }
+import React from 'react';
+import {StyleSheet, View, SafeAreaView} from 'react-native';
+import Button from '../../components/Button';
+import InputValue from '../../components/InputValue';
+export default function login() {
+  return (
+    <SafeAreaView>
+      <View style={styles.container}>
+        <InputValue title="Email" icon="mail" />
+        <InputValue title="Password" icon="lock" isPassword />
+        <Button style={styles.button} >LOGIN</Button>
+      </View>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
